@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angularapp';
   name:string="Pandurang";
+  empCount;
+  constructor(){
+this.assignValue();
+  }
+
+  assignValue(){
+this.empCount=10000;
+  }
 }

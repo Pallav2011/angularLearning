@@ -8,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class Test1Component implements OnInit {
 
  dateNow:any=Date();
+ 
+ details={
+  firstName:"Pandurang",
+  lastName:"Ranpise"
+ }
+ 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
