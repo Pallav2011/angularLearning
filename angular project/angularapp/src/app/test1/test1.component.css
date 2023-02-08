@@ -1,0 +1,9 @@
+.fontColor{
+    color: deeppink;
+}
+.borderStyle{
+    border-style:solid;
+    border-radius: 10px;
+    background-color: aqua;
+    color: rgb(255, 0, 0);
+}
