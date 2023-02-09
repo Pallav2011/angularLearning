@@ -1,5 +1,11 @@
+<div>
 <p>test2 works!</p>
+<img [src]="imageUrl" alt="">
 <h4>My age is {{age}}</h4>
 <h4>My address is {{adress}}</h4>
-<img [src]="imageUrl" alt="">
 <h4>{{pinCode}}</h4>
+<button (click)="onButtonClick()">Click me</button>  {{data}}
+<h3>Count value is : {{count}}</h3>
+<button (click)="buttonIncreaseValue()">Click to increase value</button><br><br>
+<input type="text" (keyup)="valueKeyUp($event)"> &nbsp;&nbsp;&nbsp;&nbsp;<label>{{inputData}}</label>
+</div>
