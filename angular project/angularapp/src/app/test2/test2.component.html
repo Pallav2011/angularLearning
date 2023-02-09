@@ -4,19 +4,25 @@
 <h4>My age is {{age}}</h4>
 <h4>My address is {{adress}}</h4>
 <h4>{{pinCode}}</h4>
-
+<hr>
 
 <h2>Property Data binding</h2>
 <img [src]="imageUrl" alt="">
+<hr>
 
 <h2>Event Data binding</h2>
 <button (click)="onButtonClick()">Click me</button>  {{data}}
 
+
 <h3>Count value is : {{count}}</h3>
 <button (click)="buttonIncreaseValue()">Click to increase value</button><br><br>
-
 <input type="text" (keyup)="valueKeyUp($event)"> &nbsp;&nbsp;&nbsp;&nbsp;<label>{{inputData}}</label>
-
+<hr>
 <h2>Two way Data binding</h2>
 <input type="text" [(ngModel)]="firstName"> &nbsp;&nbsp;&nbsp;{{firstName}}
+<hr>
+<h2>Two Data binding Assignment</h2>
+<input type="text" [(ngModel)]="userName">
+<p>User name is {{userName}}</p>
+<button (click)="clearText()">Click me</button>
 </div>
