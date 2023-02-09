@@ -1,11 +1,22 @@
 <div>
 <p>test2 works!</p>
-<img [src]="imageUrl" alt="">
+<h2>String interpolation Data binding</h2>
 <h4>My age is {{age}}</h4>
 <h4>My address is {{adress}}</h4>
 <h4>{{pinCode}}</h4>
+
+
+<h2>Property Data binding</h2>
+<img [src]="imageUrl" alt="">
+
+<h2>Event Data binding</h2>
 <button (click)="onButtonClick()">Click me</button>  {{data}}
+
 <h3>Count value is : {{count}}</h3>
 <button (click)="buttonIncreaseValue()">Click to increase value</button><br><br>
+
 <input type="text" (keyup)="valueKeyUp($event)"> &nbsp;&nbsp;&nbsp;&nbsp;<label>{{inputData}}</label>
+
+<h2>Two way Data binding</h2>
+<input type="text" [(ngModel)]="firstName"> &nbsp;&nbsp;&nbsp;{{firstName}}
 </div>

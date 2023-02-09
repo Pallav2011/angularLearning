@@ -11,6 +11,7 @@ adress="Pandharpur";
 pinCode=413304;
 data="";
 count:number=0;
+firstName:string="Pandurang";
 imageUrl=`https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hotel-at-img-academy.jpg`;
   constructor() { }
 
@@ -28,4 +29,5 @@ imageUrl=`https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hot
   valueKeyUp(value){
     this.inputData=value.target.value;
   }
+
 }
