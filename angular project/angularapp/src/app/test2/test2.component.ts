@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test2',
@@ -14,7 +14,9 @@ count:number=0;
 firstName:string="Pandurang";
 userName:string="";
 imageUrl=`https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hotel-at-img-academy.jpg`;
+childData='I am Come From Child Component';
 @Input() child:string;
+@Output() fromChild : EventEmitter<string>=new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
@@ -36,5 +38,7 @@ imageUrl=`https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hot
   clearText(){
     this.userName="";
   }
-
+  sendToParent(){
+    this.fromChild.emit(this.childData);
+  }
 }

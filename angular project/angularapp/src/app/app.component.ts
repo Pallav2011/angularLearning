@@ -29,4 +29,10 @@ this.assignValue();
   assignValue(){
 this.empCount=10000;
   }
+  clickToSave(){
+    alert('Event Raised');
+  }
+  onParent(val){
+alert(val);
+  }
 }
