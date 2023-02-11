@@ -17,6 +17,11 @@ imageUrl=`https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hot
 childData='I am Come From Child Component';
 @Input() child:string;
 @Output() fromChild : EventEmitter<string>=new EventEmitter<string>();
+myDetails={
+  name:'Pandurang',
+  moNo:9145437409
+}
+@Output() objFromChild : EventEmitter<any>=new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
@@ -40,5 +45,8 @@ childData='I am Come From Child Component';
   }
   sendToParent(){
     this.fromChild.emit(this.childData);
+  }
+  showObjData(){
+    this.objFromChild.emit(this.myDetails)
   }
 }

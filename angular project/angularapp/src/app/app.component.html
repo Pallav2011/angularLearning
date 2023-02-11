@@ -27,11 +27,9 @@
   </li>
 </ul>
 
-<app-test2 [child]="parentData" (fromChild)="onParent($event)"></app-test2>
+
+<app-test2 [child]="parentData" (fromChild)="onParent($event)" (objFromChild)="objParent($event)"></app-test2>
 
 <app-card [image]="arrayofData[0].image" [titleData]="arrayofData[0].titleData" [description]="arrayofData[0].description"></app-card>
 <app-card [image]="arrayofData[1].image" [titleData]="arrayofData[1].titleData" [description]="arrayofData[1].description"></app-card>
-<hr>
-<h2>Pass Data from child to parent by using @Output () decorator</h2>
-<button (click)="clickToSave()">Save</button>
 <router-outlet></router-outlet>

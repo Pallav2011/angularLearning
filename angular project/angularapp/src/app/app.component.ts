@@ -29,10 +29,12 @@ this.assignValue();
   assignValue(){
 this.empCount=10000;
   }
-  clickToSave(){
-    alert('Event Raised');
-  }
+
   onParent(val){
 alert(val);
+  }
+  objParent(objVal){
+    console.log('Name is :',objVal.name);
+    console.log('Mobile No :',objVal.moNo); 
   }
 }
