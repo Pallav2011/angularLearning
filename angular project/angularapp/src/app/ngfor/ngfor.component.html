@@ -1,0 +1,35 @@
+<div> 
+   <h2>learning *ngFor (Structural Directive)</h2>
+    <h4>It is used to repeat the portion of html template once for each element</h4>
+    <div> 
+       <h3> {{title}}</h3>
+    </div>
+    <div>
+        <div>
+            <table class="table">               
+            <thead>
+                <tr>
+                <th>Sr. No.</th>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Cast</th>
+                <th>Release Date</th>
+            </tr>
+            </thead>
+            <tbody>               
+                <tr *ngFor="let movie of movieObj ; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.director}}</td>
+                    <td>{{movie.cast}}</td>
+                    <td>{{movie.releaseDate}}</td>              
+                </tr>           
+            </tbody>       
+        </table>
+        </div>
+    </div>
+</div>
+<h3>List of Songs </h3>
+<ul>
+    <li *ngFor="let song of arrayOfSongs">{{song}}</li>
+</ul>
