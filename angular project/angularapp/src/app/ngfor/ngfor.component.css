@@ -1,3 +1,12 @@
 h2{
     color: red;
 }
+.odd{
+    background-color:rgb(113, 243, 243);
+}
+.even{
+    background-color:rgb(236, 148, 192);
+}
+table,th,tr,td{
+    border: 2px solid blue;
+}

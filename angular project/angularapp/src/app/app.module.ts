@@ -9,6 +9,7 @@ import { DemoComponent } from './demo/demo.component';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { NgforComponent } from './ngfor/ngfor.component';
+import { CountrystatedropdownComponent } from './countrystatedropdown/countrystatedropdown.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { NgforComponent } from './ngfor/ngfor.component';
     Test2Component,
     DemoComponent,
     CardComponent,
-    NgforComponent
+    NgforComponent,
+    CountrystatedropdownComponent
   ],
   imports: [
     BrowserModule,

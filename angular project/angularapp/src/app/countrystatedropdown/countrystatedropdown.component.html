@@ -1,0 +1,11 @@
+<div class="align">
+    <h2>Assignment of *ngFor </h2>
+<select (change)="onCountrySelect($event)">
+    <option value="">Select Country</option>
+    <option value="{{country.id}}" *ngFor="let country of arrayOfCountry">{{country.name}}</option>
+</select><br><br>
+<select>
+    <option>Select States</option>
+    <option value="{{state.id}}" *ngFor="let state of states">{{state.name}}</option>
+</select>
+</div>

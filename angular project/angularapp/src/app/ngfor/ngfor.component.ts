@@ -21,9 +21,13 @@ export class NgforComponent implements OnInit {
 
   arrayOfSongs=['Radha hi Bavari','Jeew Rangala','Sairat zal ji','Galavar khali','Apsara ali'];
 
+  arrayOfCountry=['India','America'];
+  arrayOfStates=['Maharashtra','california'];
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

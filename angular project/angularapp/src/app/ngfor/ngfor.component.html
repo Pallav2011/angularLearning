@@ -17,7 +17,7 @@
             </tr>
             </thead>
             <tbody>               
-                <tr *ngFor="let movie of movieObj ; let i=index">
+                <tr *ngFor="let movie of movieObj ; let i=index ; let evenItem = even ; let oddItem = odd" [class.even]="evenItem" [class.odd]="oddItem">
                     <td>{{i+1}}</td>
                     <td>{{movie.title}}</td>
                     <td>{{movie.director}}</td>
@@ -29,7 +29,7 @@
         </div>
     </div>
 </div>
-<h3>List of Songs </h3>
+<h3>List of Songs </h3><hr>
 <ul>
     <li *ngFor="let song of arrayOfSongs">{{song}}</li>
-</ul>
+</ul><hr>
