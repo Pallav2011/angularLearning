@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Employee } from '../models/employee';
 
 @Component({
   selector: 'app-test2',
@@ -22,6 +23,8 @@ myDetails={
   moNo:9145437409
 }
 @Output() objFromChild : EventEmitter<any>=new EventEmitter<any>();
+empObj:Employee;
+@Output() empObjDeco : EventEmitter<Employee>=new EventEmitter<Employee>();
   constructor() { }
 
   ngOnInit() {
@@ -48,5 +51,11 @@ myDetails={
   }
   showObjData(){
     this.objFromChild.emit(this.myDetails)
+  }
+  showEmpData(){
+    this.empObj = new Employee();
+    this.empObj.name='Pandurang';
+    this.empObj.salary=300000;
+    this.empObjDeco.emit(this.empObj);
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from './models/employee';
 
 @Component({
   selector: 'app-root',
@@ -36,5 +37,9 @@ alert(val);
   objParent(objVal){
     console.log('Name is :',objVal.name);
     console.log('Mobile No :',objVal.moNo); 
+  }
+  showEmpObj(empVal:Employee){
+console.log(empVal);
+
   }
 }
