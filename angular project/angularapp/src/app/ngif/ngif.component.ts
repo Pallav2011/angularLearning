@@ -30,6 +30,7 @@ export class NgifComponent implements OnInit {
     }
   ]
 
+  showMe:boolean=true;
   constructor() { }
 
   ngOnInit() {
