@@ -1,10 +1,14 @@
 
 <hr>
 <h2 style="color: red;">Learning *ngIf structural directive</h2>
-<div *ngIf="showMe">
+<div *ngIf="showMe ; else elseBlock">
     <div *ngFor="let p of posts">
         <div>{{p.title}}</div>
         <div> <img *ngIf="p.imageUrl" width="100px" [src]="p.imageUrl" alt="this is nature image"></div>
         <div>{{p.content}}</div>
     </div>
 </div>
+
+<ng-template #elseBlock>
+    <p>Content is not available</p>
+</ng-template>
