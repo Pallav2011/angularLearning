@@ -16,3 +16,23 @@
           </div>
     </div>
 </div><hr>
+<h2 style="color: red;">*ngSwitch Example for dropdown list</h2>
+<div class="container">
+ <div class="col-md-4">
+  <select class="form-control" (change)="getProductValue($event)">
+    <option value="Default">Select Product</option>
+    <option value="Laptop">Laptop</option>
+    <option value="Mobile">Mobile</option>
+    <option value="TV">TV</option>
+    <option value="Washing machine">Washing machine</option>
+  </select>
+ </div>
+</div>
+
+<div class="col-md-12" [ngSwitch]="selectedProduct">
+  <h2 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h2>
+  <h2 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h2>
+  <h2 class="text-success" *ngSwitchCase="'TV'">TV</h2>
+  <h2 class="text-success" *ngSwitchCase="'Washing machine'">Washing machine</h2>
+
+</div><hr>

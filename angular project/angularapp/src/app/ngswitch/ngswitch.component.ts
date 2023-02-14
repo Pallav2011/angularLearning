@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgswitchComponent implements OnInit {
 
+  selectedProduct:string;
   arrayOfCourses:any[]=[
     {
       id:1,
@@ -35,6 +36,10 @@ export class NgswitchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getProductValue(val){
+    this.selectedProduct=val.target.value;
   }
 
 }
