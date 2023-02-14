@@ -1,0 +1,10 @@
+
+<hr>
+<h2 style="color: red;">Learning *ngIf structural directive</h2>
+<div>
+    <div *ngFor="let p of posts">
+        <div>{{p.title}}</div>
+        <div> <img *ngIf="p.imageUrl" width="100px" [src]="p.imageUrl" alt="this is nature image"></div>
+        <div>{{p.content}}</div>
+    </div>
+</div>
