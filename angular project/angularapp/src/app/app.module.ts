@@ -36,6 +36,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     NgforComponent,
     CountrystatedropdownComponent,
     NgifComponent,
-    CustomDirective
+    CustomDirective,
+    NgswitchComponent
   ],
   imports: [
     BrowserModule,

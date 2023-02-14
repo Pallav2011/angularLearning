@@ -36,9 +36,19 @@
 <app-countrystatedropdown></app-countrystatedropdown>
 <app-ngif></app-ngif>
 <hr>
+
+<app-ngswitch></app-ngswitch>
+
 <h2 style="color: red;">Custum directive:-</h2>
 <h4>we are apply the CSS properties by using custom directive on following paragraph</h4>
 <p appCustom>This is my paragraph</p>
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<hr>
+<h2 style="color: red;">learing about Angular Material</h2>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle><br>
+<mat-slider min="1" max="5" step="0.5" value="1.5">
+  <input matSliderThumb>
+</mat-slider>
+<mat-spinner></mat-spinner>
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
 
 <router-outlet></router-outlet>
