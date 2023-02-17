@@ -1,3 +1,8 @@
 .bgcolor{
     background-color: burlywood;
 }
+
+ul li:hover{
+    border: solid 2px blue;
+    box-shadow: 5px 5px 2px red;
+}

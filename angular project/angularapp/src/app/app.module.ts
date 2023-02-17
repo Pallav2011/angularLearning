@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { DemoComponent } from './demo/demo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { CountrystatedropdownComponent } from './countrystatedropdown/countrystatedropdown.component';
@@ -37,6 +37,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { TemplateformComponent } from './templateform/templateform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
     CountrystatedropdownComponent,
     NgifComponent,
     CustomDirective,
-    NgswitchComponent
+    NgswitchComponent,
+    TemplateformComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +79,8 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
     MatRadioModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
