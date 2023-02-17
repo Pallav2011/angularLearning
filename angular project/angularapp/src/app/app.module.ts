@@ -38,6 +38,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { TemplateformComponent } from './templateform/templateform.component';
     NgifComponent,
     CustomDirective,
     NgswitchComponent,
-    TemplateformComponent
+    TemplateformComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
@@ -80,6 +82,7 @@ import { TemplateformComponent } from './templateform/templateform.component';
     MatCheckboxModule,
     MatStepperModule,
     MatProgressBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

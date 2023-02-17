@@ -1,69 +1,96 @@
+<h2>Form in Angular</h2>
+<br />
 <mat-card class="login-page">
-    <mat-card-title>
-        Login (Template-Driven) 
-    </mat-card-title>
-    <mat-card-content>
-        <form class="login-form" #loginForm="ngForm">
-              <mat-form-field>   
-                <input matInput type="email" name="email"
-                ngModel
-                #email="ngModel"
-                required email
-                minlength="3" maxlength="30"
-                placeholder="Email">
+  <mat-card-title> Login (Template-Driven) </mat-card-title>
+  <mat-card-content>
+    <form class="login-form" #loginForm="ngForm">
+      <mat-form-field>
+        <input
+          matInput
+          type="email"
+          name="email"
+          ngModel
+          #email="ngModel"
+          required
+          email
+          minlength="3"
+          maxlength="30"
+          placeholder="Email"
+          (blur)="checkEmail(email)"
+        />
 
-                <mat-error *ngIf="email.errors?.required">The email is mandatory</mat-error>
-                <mat-error *ngIf="email.errors?.minlength">
-                  your email must have minimum {{email.errors?.minlength.requiredLength}} chars,
-                  but it only has {{email.errors?.minlength.actualLength}}.
-                </mat-error> 
-                <!-- <mat-error *ngIf="email.errors?.valueEmail">
-                  please use proper domain
-                </mat-error> -->
-              </mat-form-field>
-            <!-- <small *ngIf="!userDetail.valid && userDetail.touched">This email is mandatory</small> -->
-            <!-- <mat-error *ngIf="userDetail.email.errors?.required">The email is mandatory.</mat-error> -->
-            <mat-form-field>
-                <input matInput  ngModel required  #password="ngModel"  name="password" type="password" placeholder="Password">
-                <mat-error *ngIf="password.errors?.required">The password is mandatory</mat-error>
-              </mat-form-field>
-        <!-- </div> -->
-            <!-- <mat-form-field appearance="fill">
-                <mat-label [ngModel]="defaultValue"></mat-label>
-                <mat-select  >
-                  <mat-option value="Angular">Angular</mat-option>
-                  <mat-option value="Javascript" >Javascript</mat-option>
-                  <mat-option value="Typescript">Typescript</mat-option>
-                </mat-select>
-              </mat-form-field> -->
-
-              <select class="form-control" name="course" [ngModel]="defaultValue" >
-                <option *ngFor="let course of courses"  value="{{course}}">{{course}}</option>
-              </select>
-
-              <div class="form-group" *ngFor="let gender of genders">
-                <input type="radio" name="gender" id="gender" value="{{gender.value}}" [ngModel]="defaultGender"
-                class="custom-control custom-radio">
-                <label for="{{gender.id}}">{{gender.value}}</label>
-              </div>
-
-            <button  mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
-        </form>
+        <mat-error *ngIf="email.errors?.required">
+        The email is mandatory</mat-error>
+        <mat-error *ngIf="email.errors?.minlength">
+          your email must have minimum
+          {{ email.errors?.minlength.requiredLength }} chars, but it only has
+          {{ email.errors?.minlength.actualLength }}
+        </mat-error>
         
-        <div class="form-val">
-            <!-- {{ loginForm.value | json}} -->
-        </div>
-        
-    </mat-card-content>
+      </mat-form-field>
+      <small class="text-danger" *ngIf="isEmailValid">Email domain not allowed</small>
+      <mat-form-field>
+        <input
+          matInput
+          ngModel
+          required
+          #password="ngModel"
+          name="password"
+          [type]="hide ? 'password' : 'text'"
+          placeholder="Password"
+          minlength="8" 
+          maxlength="20"
+        />
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="password.errors?.required"
+          >The password is mandatory</mat-error
+        >
+        <mat-error *ngIf="password.errors?.minlength">
+          your password must have minimum
+          {{ password.errors?.minlength.requiredLength }} chars, but it only has
+          {{ password.errors?.minlength.actualLength }}
+        </mat-error>
+      </mat-form-field>
+      <select class="form-control" name="course" [ngModel]="defaultValue">
+        <option *ngFor="let course of courses" value="{{ course }}">
+          {{ course }}
+        </option>
+      </select>
+      <div class="form-group" *ngFor="let gender of genders">
+        <input
+          type="radio"
+          name="gender"
+          id="gender"
+          value="{{ gender.value }}"
+          [ngModel]="defaultGender"
+          class="custom-control custom-radio"
+        />
+        <label for="{{ gender.id }}">{{ gender.value }}</label>
+      </div>
+      <button mat-raised-button color="primary" (click)="login(loginForm)">
+        Login
+      </button>
+    </form>
+    <div class="form-val"></div>
+  </mat-card-content>
 </mat-card>
 
 <div class="row justify-content-center mt2" *ngIf="isSubmitted">
   <div class="col-md-6 rounded shadow py-4">
     <h2>Form Data</h2>
-    <p>Email: <strong>{{formData.email}}</strong></p>
-    <p>Password: <strong>{{formData.password}}</strong></p>
-    <p>Course: <strong>{{formData.course}}</strong></p>
-    <p>Gender: <strong>{{formData.gender}}</strong></p>
-
+    <p>
+      Email: <strong>{{ formData.email }}</strong>
+    </p>
+    <p>
+      Password: <strong>{{ formData.password }}</strong>
+    </p>
+    <p>
+      Course: <strong>{{ formData.course }}</strong>
+    </p>
+    <p>
+      Gender: <strong>{{ formData.gender }}</strong>
+    </p>
   </div>
 </div>
