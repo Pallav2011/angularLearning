@@ -42,16 +42,18 @@
               </select>
 
               <div class="form-group" *ngFor="let gender of genders">
-
                 <input type="radio" name="gender" id="gender" value="{{gender.value}}" [ngModel]="defaultGender"
                 class="custom-control custom-radio">
                 <label for="{{gender.id}}">{{gender.value}}</label>
               </div>
+
             <button  mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
         </form>
+        
         <div class="form-val">
             <!-- {{ loginForm.value | json}} -->
         </div>
+        
     </mat-card-content>
 </mat-card>
 

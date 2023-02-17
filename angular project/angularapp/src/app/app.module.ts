@@ -80,7 +80,6 @@ import { TemplateformComponent } from './templateform/templateform.component';
     MatCheckboxModule,
     MatStepperModule,
     MatProgressBarModule,
-    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
