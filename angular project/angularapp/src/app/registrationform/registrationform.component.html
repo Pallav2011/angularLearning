@@ -1,0 +1,84 @@
+<hr>
+<!-- <div class="background"></div> -->
+
+<mat-card class="register-page" >
+  <mat-card-title> Registration Form</mat-card-title>
+  <mat-card-content>
+    <form class="register-form" #registerForm="ngForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Enter First Name</mat-label>
+            <input matInput placeholder="First Name" ngModel #firstname="ngModel" name="firstname" minlength="5" maxlength="5" required>
+            <mat-error *ngIf="firstname.errors?.required">This first name is mandatory</mat-error>
+            <mat-error *ngIf="firstname.errors?.minlength">You need to enter minimum 5 charecter</mat-error>
+        </mat-form-field>   
+
+          <mat-form-field appearance="outline">
+            <mat-label>Enter last Name</mat-label>
+            <input matInput placeholder="Last Name" ngModel #lastname="ngModel" name="lastname" maxlength="10">
+          </mat-form-field>   
+
+          <mat-form-field appearance="outline">
+          <mat-label>Enter Your Age</mat-label>
+            <input matInput placeholder="Age" type="number" ngModel #age="ngModel" name="age" (blur)="validAge(age)" required>
+            <mat-error *ngIf="age.errors?.required">Age is mandatory</mat-error> 
+            <small class="text-danger" *ngIf="isAgeValid">Enter age between 17 to 20</small>
+          </mat-form-field> 
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Email</mat-label>
+            <input matInput placeholder="Email" type="email" email ngModel #email="ngModel" name="email" required>
+            <mat-error *ngIf="email.errors?.required">Email is mandatory</mat-error>
+            <mat-error *ngIf="email.errors?.email">Enter Valid Email</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Phone Number</mat-label>
+            <input matInput placeholder="Phone Number" name="phonenumber" ngModel #phonenumber="ngModel" type="text" minlength="10" maxlength="10">
+            <mat-error *ngIf="phonenumber.errors?.minlength">Enter accurate 10 digit</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <mat-select [(ngModel)]="defaultCity" name="city">
+              <mat-option *ngFor="let city of cities" [value]="city">
+                {{city}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-label>Select Gender</mat-label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1" [checked]="true">Male</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="2">Female</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="3">Other</mat-radio-button>
+          </mat-radio-group> <br>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Password</mat-label>
+            <input matInput ngModel required #password="ngModel" name="password" [type]="hide ? 'password' : 'text'"
+              placeholder="Password" minlength="8" maxlength="20" (blur)="savePassword(password)"/>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.errors?.required">The password is mandatory</mat-error>
+            <mat-error *ngIf="password.errors?.minlength">
+              your password must have minimum
+              {{ password.errors?.minlength.requiredLength }} chars, but it only has
+              {{ password.errors?.minlength.actualLength }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput ngModel required #confirmpassword="ngModel" name="confirmpassword" [type]="hide ? 'confirmpassword' : 'text'"
+              placeholder="Confirm Password" (blur)="checkPassword(confirmpassword)"/>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="confirmpassword.errors?.required">The Confirm password is mandatory</mat-error>
+            <small class="text-danger" *ngIf="confirmPass">Password should be match</small>
+          </mat-form-field>
+
+    </form>
+  </mat-card-content>
+</mat-card>

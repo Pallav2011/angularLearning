@@ -39,6 +39,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { RegistrationformComponent } from './registrationform/registrationform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     CustomDirective,
     NgswitchComponent,
     TemplateformComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    RegistrationformComponent
   ],
   imports: [
     BrowserModule,

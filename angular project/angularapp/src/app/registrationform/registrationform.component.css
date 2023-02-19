@@ -1,0 +1,13 @@
+.register-page {
+    max-width: 350px;
+    margin: 50px auto 0 auto;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+}
+/* .background{
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/backgroun…-model-minimal-background-render-image_452981.jpg');
+    width: 600px;
+    text-align:left;
+} */

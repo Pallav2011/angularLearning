@@ -41,8 +41,7 @@ export class TemplateformComponent implements OnInit {
     this.formData.password = form.value.password;
     this.formData.course = form.value.course;
     this.formData.gender = form.value.gender;
-    // form.control['email'].setValue('');
-    // form.control['password'].setValue('');
+    form.reset();
     form.controls['course'].setValue('Angular');
     form.controls['gender'].patchValue('Male');
   }

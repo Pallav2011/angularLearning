@@ -20,7 +20,11 @@ export class ReactiveformComponent implements OnInit {
   createMethod(){
     this.myReactiveForm = new FormGroup({
       'userName':new FormControl(null),
-      'email':new FormControl(null)
+      'email':new FormControl(null),
+      'male':new FormControl(null),
+      'female':new FormControl(null),
+      'other':new FormControl(null)
+
     })
   }
 
