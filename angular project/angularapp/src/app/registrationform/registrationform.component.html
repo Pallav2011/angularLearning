@@ -1,5 +1,4 @@
 <hr>
-<!-- <div class="background"></div> -->
 
 <mat-card class="register-page" >
   <mat-card-title> Registration Form</mat-card-title>
@@ -7,7 +6,7 @@
     <form class="register-form" #registerForm="ngForm">
         <mat-form-field appearance="outline">
             <mat-label>Enter First Name</mat-label>
-            <input matInput placeholder="First Name" ngModel #firstname="ngModel" name="firstname" minlength="5" maxlength="5" required>
+            <input matInput placeholder="First Name" ngModel #firstname="ngModel" name="firstname" minlength="5" required>
             <mat-error *ngIf="firstname.errors?.required">This first name is mandatory</mat-error>
             <mat-error *ngIf="firstname.errors?.minlength">You need to enter minimum 5 charecter</mat-error>
         </mat-form-field>   
@@ -79,6 +78,9 @@
             <small class="text-danger" *ngIf="confirmPass">Password should be match</small>
           </mat-form-field>
 
+          <button mat-raised-button color="primary">Submit</button>
+
     </form>
   </mat-card-content>
 </mat-card>
+
