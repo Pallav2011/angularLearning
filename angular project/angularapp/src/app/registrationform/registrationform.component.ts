@@ -41,4 +41,8 @@ export class RegistrationformComponent implements OnInit {
       this.confirmPass=true;
     }
   }
+
+  saveData(){
+    alert("Congratulation, your account has been successfully created");
+  }
 }
