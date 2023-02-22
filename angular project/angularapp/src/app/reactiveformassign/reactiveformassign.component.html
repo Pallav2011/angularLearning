@@ -1,0 +1,40 @@
+<hr><hr>
+<div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-6 text-left rounded shadow py-5">
+        <h2>Subscription Form</h2>
+        <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email">Email: </label>
+               <input type="text" formControlName="email" class="form-control" id="email" placeholder="Enter Email here"> 
+                <small class="text-danger" *ngIf="!subscriptionForm.get('email').valid && subscriptionForm.get('email').touched"> Please enter valid email </small>
+            </div>
+            <div class="form-group">
+                <label for="Subscription">Select Subscription:</label>
+                <select formControlName="subscription"id="subscription" class="form-control">
+                  <option value="basic">Basic</option>
+                  <option value="advanced">Advanced</option>
+                  <option value="pro">Pro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Enter Password:</label>
+                <input type="password" formControlName="password" id="password" class="form-control">
+                <small class="text-danger" *ngIf="!subscriptionForm.get('password').valid && subscriptionForm.get('password').touched">Password is mandatory</small>
+            </div>
+            <div class="form-group">
+                <label for="date">Select Date:</label>
+             <input type="date" formControlName="date" id="date" class="form-control" min="{{todayDate}}">
+            </div><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class="row justify-content-center mt-2" *ngIf="isSubmitted">
+            <div class="col-md-6 rounded shadow py4">
+                <h2>Form Data</h2>
+                <p>Email: <strong> {{ subscriptionForm.get('email').value}} </strong></p>
+                <p>Subscription: <strong> {{ subscriptionForm.get('subscription').value}} </strong></p>
+                <p>Date: <strong> {{ subscriptionForm.get('date').value}} </strong></p>
+            </div>
+    </div>
+    </div>
+</div> 

@@ -4,23 +4,43 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <h2>Reactive Form</h2>
-            <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()" > 
+                <div formGroupName="userDetails">
+                 <div class="form-group">
                 <label for="userName">User Name</label>
                 <input type="text" formControlName="userName" class="form-control" id="userName" placeholder="user Name">
-            </div>
-            <div class="form-group">
+                  </div>
+                  <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" formControlName="email" class="form-control" id="email" placeholder="Email">
-            </div><br>
+                <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">proper email is mandatory</small>
+                   </div><br>
+                 </div>
                <div class="form-group">
                 <label for="gender">Select Gender</label><br>
                 <mat-radio-button value="1" >Male</mat-radio-button><br>
                 <mat-radio-button value="2">Female</mat-radio-button><br>
                 <mat-radio-button value="3" >Other</mat-radio-button>
                 </div>
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select formControlName="course" id="course" class="form-control">
+                        <option value="angular">Angular</option>
+                        <option value="html">HTML</option>
+                        <option value="javascript">Javascript</option>
+                    </select>
+                </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div class="row justify-content-center mt-2" *ngIf="isSubmitted">
+                <div class="col-md-6 rounded shadow py4">
+                    <h2>Form Data</h2>
+                    <p>User Name: <strong> {{ myReactiveForm.get('userDetails.userName').value}} </strong></p>
+                    <p>Email: <strong> {{ myReactiveForm.get('userDetails.email').value}} </strong></p>
+                    <!-- <p>Gender: <strong> {{ myReactiveForm.get('gender').value}} </strong></p> -->
+                    <p>Course: <strong> {{ myReactiveForm.get('course').value}} </strong></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

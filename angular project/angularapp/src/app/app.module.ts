@@ -40,6 +40,8 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { RegistrationformComponent } from './registrationform/registrationform.component';
+import { ReactiveformassignComponent } from './reactiveformassign/reactiveformassign.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,8 @@ import { RegistrationformComponent } from './registrationform/registrationform.c
     NgswitchComponent,
     TemplateformComponent,
     ReactiveformComponent,
-    RegistrationformComponent
+    RegistrationformComponent,
+    ReactiveformassignComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +87,7 @@ import { RegistrationformComponent } from './registrationform/registrationform.c
     MatCheckboxModule,
     MatStepperModule,
     MatProgressBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
