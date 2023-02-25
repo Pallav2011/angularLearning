@@ -1,0 +1,10 @@
+.subscrib-page {
+    max-width: 1000px;
+    margin: 50px auto 0 auto;
+    background-image: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg);
+    background-size: cover;
+}
+/* .subscrib-form{
+    display: flex;
+    flex-direction:column; 
+} */

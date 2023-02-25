@@ -41,6 +41,7 @@ import { TemplateformComponent } from './templateform/templateform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { ReactiveformassignComponent } from './reactiveformassign/reactiveformassign.component';
+import { Reactiveformassign2Component } from './reactiveformassign2/reactiveformassign2.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { ReactiveformassignComponent } from './reactiveformassign/reactiveformas
     TemplateformComponent,
     ReactiveformComponent,
     RegistrationformComponent,
-    ReactiveformassignComponent
+    ReactiveformassignComponent,
+    Reactiveformassign2Component
   ],
   imports: [
     BrowserModule,

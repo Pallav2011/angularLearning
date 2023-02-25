@@ -1,0 +1,45 @@
+<hr><hr>
+
+<div class="userPage">
+  <img src="{{imageUrl}}" alt="User Image" width="120px" height="100px">
+</div>
+
+<div class="userPage">
+  <h3>User Details</h3>
+  <form [formGroup]="createUserForm">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Full Name</mat-label>
+      <input type="text" matInput formControlName="fullName" id="fullName" class="form-control" placeholder="Full Name">    
+      <mat-error *ngIf="!createUserForm.get('fullName').valid && createUserForm.get('fullName').touched">Full name is <strong>required</strong></mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Your Birth Date</mat-label>
+      <input matInput type="date" formControlName="date" id="date" class="form-control" max="{{todayDate}}">
+      <mat-error *ngIf="!createUserForm.get('date').valid && createUserForm.get('date').touched">Select birth date</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Select Gender</mat-label>
+      <mat-select formControlName="gender" id="gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+      </mat-select>
+      <mat-error *ngIf="!createUserForm.get('gender').valid && createUserForm.get('gender').touched">select Gender</mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 100px;" >
+      <mat-label>Select Country</mat-label>
+      <mat-select formControlName="country" id="country">
+        <mat-option *ngFor="let c of arrayOfCountry" value="{{c}}">{{c}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="!createUserForm.get('country').valid && createUserForm.get('country').touched">select country</mat-error>
+    </mat-form-field>
+
+  </form>
+</div>
+
+<div class="userPage">
+  <h3>Account Details</h3>
+</div>

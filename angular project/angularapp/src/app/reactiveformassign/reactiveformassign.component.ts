@@ -14,7 +14,7 @@ export class ReactiveformassignComponent implements OnInit {
    dt:string=this.d.toISOString();
    todayDate:string;
    indexOfT:number;
-
+ 
   constructor() { 
     this.createControls();
     this.indexOfT=this.dt.indexOf('T');
@@ -37,6 +37,8 @@ export class ReactiveformassignComponent implements OnInit {
   onSubmit(){
     this.isSubmitted=true;
     console.log(this.subscriptionForm);
+    console.log(this.d);
+    
   console.log(this.todayDate); 
   }
 
