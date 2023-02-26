@@ -35,6 +35,13 @@
         <mat-option *ngFor="let c of arrayOfCountry" value="{{c}}">{{c}}</mat-option>
       </mat-select>
       <mat-error *ngIf="!createUserForm.get('country').valid && createUserForm.get('country').touched">select country</mat-error>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <mat-form-field >
+      <mat-label>Phone No</mat-label>
+      <input type="text" matInput formControlName="phoneNo" id="phoneNo" class="form-control" placeholder="Phone Number">    
+      <mat-error *ngIf="!createUserForm.get('phoneNo').valid && createUserForm.get('phoneNo').touched">Phone Number is <strong>required</strong></mat-error>
+      <mat-hint>Mobile:091 4543 7409        Fixed:22104525</mat-hint>
     </mat-form-field>
 
   </form>

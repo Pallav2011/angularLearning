@@ -28,7 +28,8 @@ export class Reactiveformassign2Component implements OnInit {
       'fullName': new FormControl(null,Validators.required),
       'date': new FormControl(null,Validators.required),
       'gender' : new FormControl(null,Validators.required),
-      'country':new FormControl('India',Validators.required)
+      'country':new FormControl('India',Validators.required),
+      'phoneNo' : new FormControl(null,Validators.required)
     })
   }
 
