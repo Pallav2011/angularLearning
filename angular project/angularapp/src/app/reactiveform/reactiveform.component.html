@@ -30,6 +30,17 @@
                         <option value="javascript">Javascript</option>
                     </select>
                 </div>
+
+                <div class="form-group" formArrayName="skills">
+                    <label for="skills">Skills</label>
+                    <ng-container *ngFor="let skill of myReactiveForm.get('skills').controls; index as i">
+                        <input type="text" class="form-control" formControlName="{{i}}" placeholder="Add Skills">
+                    </ng-container>
+
+                    <button class="btn btn-light btn-small mt-4 btn-add" (click)="onAddSkill()"><i>+</i>Add Skills</button>
+
+                </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             <div class="row justify-content-center mt-2" *ngIf="isSubmitted">

@@ -1,7 +1,10 @@
 <hr><hr>
 
-<div class="userPage">
+<div class="userPage" style="text-align:center;">
   <img src="{{imageUrl}}" alt="User Image" width="120px" height="100px">
+  <h3>{{createUserForm.get('fullName').value}}</h3>
+  <p>{{createUserForm.get('bio').value}}</p>
+  
 </div>
 
 <div class="userPage">
@@ -37,11 +40,17 @@
       <mat-error *ngIf="!createUserForm.get('country').valid && createUserForm.get('country').touched">select country</mat-error>
     </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <mat-form-field >
+    <mat-form-field style="width: 210px;">
       <mat-label>Phone No</mat-label>
       <input type="text" matInput formControlName="phoneNo" id="phoneNo" class="form-control" placeholder="Phone Number">    
       <mat-error *ngIf="!createUserForm.get('phoneNo').valid && createUserForm.get('phoneNo').touched">Phone Number is <strong>required</strong></mat-error>
-      <mat-hint>Mobile:091 4543 7409        Fixed:22104525</mat-hint>
+      <mat-hint>Mobile:091 4543 7409</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Bio</mat-label>
+      <textarea matInput formControlName="bio" class="form-control" id="bio"></textarea>
+      <mat-hint>tell us about yourself</mat-hint>
     </mat-form-field>
 
   </form>
@@ -49,4 +58,38 @@
 
 <div class="userPage">
   <h3>Account Details</h3>
+  <form [formGroup]="createUserForm">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>User Name</mat-label>
+      <input type="text" matInput formControlName="userName" id="userName" class="form-control" placeholder="User Name">    
+      <mat-error *ngIf="!createUserForm.get('userName').valid && createUserForm.get('userName').touched">user name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" id="email" class="form-control" placeholder="abc@gmail.com">    
+      <mat-error *ngIf="!createUserForm.get('email').valid && createUserForm.get('email').touched">Email is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" id="password" class="form-control" (change)="savePassword(password)">    
+      <mat-error *ngIf="!createUserForm.get('password').valid && createUserForm.get('password').touched">Password is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Confirm Password</mat-label>
+      <input type="confirmpassword" matInput formControlName="confirmpassword" id="confirmpassword" class="form-control" (change)="checkPassword(confirmpassword)">    
+      <mat-error *ngIf="!createUserForm.get('confirmpassword').valid && createUserForm.get('confirmpassword').touched">Confirm Password is required</mat-error>
+      <small class="text-danger" *ngIf="confirmPass">Password should be match</small>
+    </mat-form-field>
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin"><strong>I accept terms and conditions</strong></mat-checkbox>
+    </section>
+    <!-- <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div> -->
+  </form>
 </div>

@@ -14,6 +14,8 @@ export class Reactiveformassign2Component implements OnInit {
   todayDate:string;
   indexOfT:number;
   arrayOfCountry=['India','UK','Chin','Japan','Jermany','Australiya','Ressia'];
+  myPassword:string;
+  confirmPass:boolean=false;
   constructor() { 
     this.createControls();
     this.indexOfT=this.dt.indexOf('T');
@@ -29,8 +31,32 @@ export class Reactiveformassign2Component implements OnInit {
       'date': new FormControl(null,Validators.required),
       'gender' : new FormControl(null,Validators.required),
       'country':new FormControl('India',Validators.required),
-      'phoneNo' : new FormControl(null,Validators.required)
+      'phoneNo' : new FormControl(null,Validators.required),
+      'bio': new FormControl(null,Validators.maxLength(256)),
+      'userName': new FormControl(null,Validators.required),
+      'email':new FormControl(null,[Validators.required,Validators.email]),
+      'password' :new FormControl(null,Validators.required),
+      'confirmpassword':new FormControl(null,Validators.required)
     })
   }
+
+  // savePassword(password){
+  //   this.myPassword=password;
+  //   console.log(this.myPassword);
+  //   console.log(password);
+    
+    
+  // }
+
+  // checkPassword(confirmpassword){
+  //   let cPassword=confirmpassword.value;
+  //   if(this.myPassword === cPassword)
+  //   { 
+  //     this.confirmPass=false;
+  //   }
+  //   else{
+  //     this.confirmPass=true;
+  //   }
+  // }
 
 }

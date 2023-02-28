@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveform',
@@ -29,13 +29,19 @@ export class ReactiveformComponent implements OnInit {
       'male':new FormControl(null),
       'female':new FormControl(null),
       'other':new FormControl(null),
-      'course':new FormControl('Angular')
+      'course':new FormControl('Angular'),
+      'skills': new FormArray([new FormControl(null,Validators.required)])
     })
   }
 
   onSubmit(){
     this.isSubmitted=true;
     console.log(this.myReactiveForm);
-    
   }
+
+  onAddSkill(){
+    (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null,Validators.required));
+  }
+
+
 }

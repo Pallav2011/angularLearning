@@ -19,4 +19,11 @@
   .inlineblock{
     display: inline-block;
   }
+  .example-section {
+    margin: 12px 0;
+  }
+  
+  .example-margin {
+    margin: 0 12px;
+  }
   
