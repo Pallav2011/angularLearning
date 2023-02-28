@@ -6,9 +6,18 @@ ul li:hover{
     border: solid 2px blue;
     box-shadow: 5px 5px 2px red;
 }
-/* .background{
-    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20201101/pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_452981.jpg);
-    background-size: cover;
 
-    background-repeat: no-repeat;  
-} */
+.container {
+    width: 180px;
+    height: 600px;
+    overflow-y: scroll;
+    transform: rotate(-90deg);
+  }
+  
+  .content {
+    width: 140px;
+    height: 140px;
+    margin: 10px;
+    background-color: #a8a8df;
+    transform: rotate(90deg);
+  }
