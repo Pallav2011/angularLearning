@@ -56,4 +56,8 @@
 <app-reactiveform></app-reactiveform>
 <app-reactiveformassign></app-reactiveformassign>
 <app-reactiveformassign2></app-reactiveformassign2>
+<ng-container *ngFor="let p of products">
+  product Name:<strong class="text-success">{{p.name}}</strong>
+  product Id:<strong class="text-success">{{p.id}}</strong>
+</ng-container>
 <router-outlet></router-outlet>

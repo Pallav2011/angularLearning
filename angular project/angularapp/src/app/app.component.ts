@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Employee } from './models/employee';
+import { MyserviceService } from './service/myservice.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'angularapp';
   name:string="Pandurang";
   empCount;
@@ -23,8 +24,13 @@ export class AppComponent {
       description:'This is a Mobile.'
     }
   ]
-  constructor(){
+
+  products={};
+  constructor(private objMyService:MyserviceService){
 this.assignValue();
+  }
+  ngOnInit(): void {
+    this.products= this.objMyService.products;
   }
 
   assignValue(){

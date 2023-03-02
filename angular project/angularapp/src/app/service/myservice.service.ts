@@ -5,6 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class MyserviceService {
   showAge;
+
+  products =[
+  { name: 'Laptop', id:'101'},
+  {name: 'mobile', id: '102'},
+  {name:'TV', id: '103'}
+  ]
   constructor() { }
 
   ageCalculator(age:any):number{
