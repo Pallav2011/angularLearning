@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from './models/employee';
+import { DemoService } from './service/demo.service';
 import { MyserviceService } from './service/myservice.service';
 
 @Component({
@@ -26,11 +27,19 @@ export class AppComponent implements OnInit {
   ]
 
   products={};
-  constructor(private objMyService:MyserviceService){
+  users;
+  constructor(private objMyService:MyserviceService, private objdemoService:DemoService){
 this.assignValue();
   }
+
   ngOnInit(): void {
     this.products= this.objMyService.products;
+    this.objdemoService.getUsers().subscribe(res=>{
+      this.users=res;
+    },err=>{
+      console.log(err);
+      
+    })
   }
 
   assignValue(){
@@ -46,6 +55,8 @@ alert(val);
   }
   showEmpObj(empVal:Employee){
 console.log(empVal);
-
+  }
+  showUsers(){
+    console.log(this.users);   
   }
 }
