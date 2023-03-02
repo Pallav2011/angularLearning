@@ -25,6 +25,8 @@ export class ReactiveformassignComponent implements OnInit {
     
   }
 
+  
+
   createControls(){
     this.subscriptionForm = new FormGroup({
       'email': new FormControl(null,[Validators.required, Validators.email]),

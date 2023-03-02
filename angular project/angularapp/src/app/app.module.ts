@@ -42,6 +42,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { ReactiveformassignComponent } from './reactiveformassign/reactiveformassign.component';
 import { Reactiveformassign2Component } from './reactiveformassign2/reactiveformassign2.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { Reactiveformassign2Component } from './reactiveformassign2/reactiveform
     MatStepperModule,
     MatProgressBarModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

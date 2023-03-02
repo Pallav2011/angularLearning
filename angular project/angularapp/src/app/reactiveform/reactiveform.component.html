@@ -9,19 +9,34 @@
                  <div class="form-group">
                 <label for="userName">User Name</label>
                 <input type="text" formControlName="userName" class="form-control" id="userName" placeholder="user Name">
+                <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.userName').valid && myReactiveForm.get('userDetails.userName').touched">
+                    <span *ngIf="myReactiveForm.get('userDetails.userName').errors['required']">
+                        user name not valid
+                    </span>
+                    <span *ngIf="myReactiveForm.get('userDetails.userName').errors['namesNotAllowed']">
+                        {{myReactiveForm.get('userDetails.userName').value}} is not allowed
+                    </span>
+                </small>
                   </div>
                   <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" formControlName="email" class="form-control" id="email" placeholder="Email">
-                <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">proper email is mandatory</small>
+                <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.email').valid && myReactiveForm.get('userDetails.email').touched">
+                    <span *ngIf="myReactiveForm.get('userDetails.email').errors['required']">
+                        email is not valid
+                    </span>
+                    <span *ngIf="myReactiveForm.get('userDetails.email').errors['emailNotAllowed']">
+                        This {{myReactiveForm.get('userDetails.email').value}} email is not allowed
+                    </span>
+                </small>
                    </div><br>
                  </div>
-               <div class="form-group">
+               <!-- <div class="form-group">
                 <label for="gender">Select Gender</label><br>
                 <mat-radio-button value="1" >Male</mat-radio-button><br>
                 <mat-radio-button value="2">Female</mat-radio-button><br>
                 <mat-radio-button value="3" >Other</mat-radio-button>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label for="course">Select Course</label>
                     <select formControlName="course" id="course" class="form-control">
@@ -55,3 +70,8 @@
         </div>
     </div>
 </div>
+
+<!-- <input type="date" [(ngModel)]="age">
+<button type="button" (click)="ageCalculator()">Calculate</button>
+
+<p *ngIf="age">{{showAge}}</p> -->
