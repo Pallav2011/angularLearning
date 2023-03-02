@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MyserviceService } from '../service/myservice.service';
 
 @Component({
   selector: 'app-templateform',
@@ -29,9 +30,10 @@ export class TemplateformComponent implements OnInit {
     course:'',
     gender:''
   }
-  constructor() { }
+  constructor( private serviceObject:MyserviceService) { }
 
   ngOnInit() {
+    this.serviceObject.print();
   }
 
   login(form: NgForm) {
