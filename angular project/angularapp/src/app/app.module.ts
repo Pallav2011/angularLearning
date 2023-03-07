@@ -43,6 +43,15 @@ import { RegistrationformComponent } from './registrationform/registrationform.c
 import { ReactiveformassignComponent } from './reactiveformassign/reactiveformassign.component';
 import { Reactiveformassign2Component } from './reactiveformassign2/reactiveformassign2.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipeexampleComponent } from './pipeexample/pipeexample.component';
+import { ServiceusingdiComponent } from './serviceusingdi/serviceusingdi.component';
+import { CustumPipe } from './custum.pipe';
+import { ProductfilterComponent } from './productfilter/productfilter.component';
+import { SearchPipe } from './search.pipe';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +69,16 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveformComponent,
     RegistrationformComponent,
     ReactiveformassignComponent,
-    Reactiveformassign2Component
+    Reactiveformassign2Component,
+    PipeexampleComponent,
+    ServiceusingdiComponent,
+    CustumPipe,
+    ProductfilterComponent,
+    SearchPipe,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,55 @@
+
+<!-- <p *ngFor="let p of products">{{p.id}} {{p.name}}</p> -->
+
+<div>
+
+  <div >
+    <label for="search">Search by Name</label>
+    <input type="text" class="form-control" placeholder="Enter a name" [(ngModel)]="searchName" >
+</div>
+
+  <div>
+    <table class="table" >               
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>user Name</th>
+        <th>Email</th>
+        <th>Street</th>
+        <th>Suite</th>
+        <th>City</th>
+        <th>ZipCode</th>
+        <th>Lattitude</th>
+        <th>Longitude</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>Company Name</th>
+        <th>Company catchPhrase</th>
+        <th>Company bs</th>
+    </tr>
+    </thead>
+    <tbody>               
+        <tr *ngFor="let user of users | search:searchName">
+          <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address.street}}</td>
+            <td>{{user.address.suite}}</td>
+            <td>{{user.address.city}}</td>
+            <td>{{user.address.zipcode}}</td>
+            <td>{{user.address.geo.lat}}</td>
+            <td>{{user.address.geo.lng}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.website}}</td>
+            <td>{{user.company.name}}</td>
+            <td>{{user.company.catchPhrase}}</td>
+            <td>{{user.company.bs}}</td>
+        </tr>           
+    </tbody>       
+  </table>
+  </div>
+</div>
+
+  

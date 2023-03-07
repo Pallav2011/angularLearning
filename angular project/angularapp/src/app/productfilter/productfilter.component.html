@@ -1,0 +1,27 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <label for="search">Search by Product Name</label>
+        <input type="text" class="form-control" placeholder="Enter a product name" [(ngModel)]="searchName">
+    </div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of products | search:searchName">
+                    <th scope="row">{{p.sNo}}</th>
+                    <td>{{p.name}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.availability}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

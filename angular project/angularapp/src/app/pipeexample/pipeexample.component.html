@@ -1,0 +1,28 @@
+
+<div>
+    <h5>Change the date format by using date pipe</h5>
+Todays Date : {{todaysDate | date :'fullDate'}}
+</div>
+
+<div>
+   <h5>change the currency by using currency pipe</h5> 
+<p>
+   Price: {{price | currency:'INR' }}<br>
+   Price: {{price | currency:'USD' }}<br>
+   Price: {{price | currency:'EUR' }}
+</p>
+</div>
+
+<div>
+    <h5>tranform object into json string using json pipe</h5>
+    <p>
+        {{employee | json}}
+    </p>
+</div> 
+
+<div>
+    <h5>Custom Pipe Example</h5>
+    <p>
+        {{countLength | custum}}
+    </p>
+</div>
