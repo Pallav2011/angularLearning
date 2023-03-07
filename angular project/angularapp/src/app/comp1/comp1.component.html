@@ -1,8 +1,10 @@
 <p>comp1 works!</p>
 
 <div class="box">
-    User name: <strong>{{userName}}</strong>
-    <br><br>
-    <input type="text" placeholder="update user  name" #uname>
-    <button class="btn btn-primary ms-2" (click)="updateUserName(uname)" >Update</button>
+    User name: <strong>{{userName[0]}}</strong>
+    <br>
+    <input type="text" placeholder="update user  name" #uname> <br><br>
+    Email: <strong>{{userName[1]}}</strong><br>
+    <input type="text" placeholder="update Email" #email> <br> <br>
+    <button class="btn btn-primary ms-2" (click)="updateUserName(uname,email)" >Update</button>
 </div>
