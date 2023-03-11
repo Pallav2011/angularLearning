@@ -19,10 +19,12 @@ export class Comp4Component implements OnInit {
   ngOnInit() {
   }
 
-  updateUserName(uname)
+  arrayOfValue=[];
+  updateUserName(uname,email)
   {
-    this.userName = uname.value;
-    console.log(uname.value);
-    this._utilityService.userName.next(uname.value);
+    this.arrayOfValue[0] = uname.value;
+    this.arrayOfValue[1] = email.value;
+    // console.log(uname.value);
+    this._utilityService.userName.next(this.arrayOfValue);
   }
 }

@@ -52,6 +52,17 @@ import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductComponent } from './products/product.component';
+import { LaptopComponent } from './products/laptop/laptop.component';
+import { MobileComponent } from './products/mobile/mobile.component';
+import { CameraComponent } from './products/camera/camera.component';
+import { WatchComponent } from './products/watch/watch.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +89,18 @@ import { Comp4Component } from './comp4/comp4.component';
     Comp1Component,
     Comp2Component,
     Comp3Component,
-    Comp4Component
+    Comp4Component,
+    AboutusComponent,
+    ContactusComponent,
+    HomeComponent,
+    PagenotfoundComponent,
+    ProductComponent,
+    LaptopComponent,
+    MobileComponent,
+    CameraComponent,
+    WatchComponent,
+    DemopostComponent,
+    DemopostdetailsComponent
   ],
   imports: [
     BrowserModule,
