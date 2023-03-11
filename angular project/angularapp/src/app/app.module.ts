@@ -63,6 +63,8 @@ import { CameraComponent } from './products/camera/camera.component';
 import { WatchComponent } from './products/watch/watch.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +102,9 @@ import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.comp
     CameraComponent,
     WatchComponent,
     DemopostComponent,
-    DemopostdetailsComponent
+    DemopostdetailsComponent,
+    UserdetailsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
