@@ -65,6 +65,7 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UsersComponent } from './users/users.component';
+import { MembersComponent } from './members/members.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import { UsersComponent } from './users/users.component';
     DemopostComponent,
     DemopostdetailsComponent,
     UserdetailsComponent,
-    UsersComponent
+    UsersComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,

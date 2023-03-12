@@ -6,12 +6,14 @@ import { DemoComponent } from './demo/demo.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { HomeComponent } from './home/home.component';
+import { MembersComponent } from './members/members.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './products/camera/camera.component';
 import { LaptopComponent } from './products/laptop/laptop.component';
 import { MobileComponent } from './products/mobile/mobile.component';
 import { ProductComponent } from './products/product.component';
 import { WatchComponent } from './products/watch/watch.component';
+import { TemplateformComponent } from './templateform/templateform.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UsersComponent } from './users/users.component';
 
@@ -32,6 +34,8 @@ const routes: Routes = [
   {path:'postDetails/:id', component:DemopostdetailsComponent},
   {path:'users',component:UsersComponent},
   {path:'userDetails/:id',component:UserdetailsComponent},
+  {path:'login',component:TemplateformComponent},
+  {path:'members',component:MembersComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 
