@@ -7,6 +7,7 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
+import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './products/camera/camera.component';
 import { LaptopComponent } from './products/laptop/laptop.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path:'userDetails/:id',component:UserdetailsComponent},
   {path:'login',component:TemplateformComponent},
   {path:'members',component:MembersComponent},
+  {path:'order',component:OrderlistComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 

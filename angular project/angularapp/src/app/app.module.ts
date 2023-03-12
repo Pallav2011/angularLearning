@@ -11,7 +11,7 @@ import { CardComponent } from './card/card.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { CountrystatedropdownComponent } from './countrystatedropdown/countrystatedropdown.component';
 import { NgifComponent } from './ngif/ngif.component';
-import { CustomDirective } from './custom.directive';
+// import { CustomDirective } from './custom.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material';
@@ -56,16 +56,13 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProductComponent } from './products/product.component';
-import { LaptopComponent } from './products/laptop/laptop.component';
-import { MobileComponent } from './products/mobile/mobile.component';
-import { CameraComponent } from './products/camera/camera.component';
-import { WatchComponent } from './products/watch/watch.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UsersComponent } from './users/users.component';
 import { MembersComponent } from './members/members.component';
+import { ProductModule } from './products/product.module';
+import { OrdersModule } from './orders/orders.module';
 
 @NgModule({
   declarations: [
@@ -77,7 +74,7 @@ import { MembersComponent } from './members/members.component';
     NgforComponent,
     CountrystatedropdownComponent,
     NgifComponent,
-    CustomDirective,
+    // CustomDirective,
     NgswitchComponent,
     TemplateformComponent,
     ReactiveformComponent,
@@ -97,11 +94,6 @@ import { MembersComponent } from './members/members.component';
     ContactusComponent,
     HomeComponent,
     PagenotfoundComponent,
-    ProductComponent,
-    LaptopComponent,
-    MobileComponent,
-    CameraComponent,
-    WatchComponent,
     DemopostComponent,
     DemopostdetailsComponent,
     UserdetailsComponent,
@@ -137,7 +129,9 @@ import { MembersComponent } from './members/members.component';
     MatStepperModule,
     MatProgressBarModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ProductModule,
+    OrdersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
