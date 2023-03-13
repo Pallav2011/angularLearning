@@ -5,6 +5,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { DemoComponent } from './demo/demo.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { FashionComponent } from './fashion/fashion.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path:'login',component:TemplateformComponent},
   {path:'members',component:MembersComponent},
   {path:'order',component:OrderlistComponent},
+  {path:'fashion',component:FashionComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 

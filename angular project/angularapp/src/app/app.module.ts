@@ -63,6 +63,7 @@ import { UsersComponent } from './users/users.component';
 import { MembersComponent } from './members/members.component';
 import { ProductModule } from './products/product.module';
 import { OrdersModule } from './orders/orders.module';
+import { FashionModule } from './fashion/fashion.module';
 
 @NgModule({
   declarations: [
@@ -131,7 +132,8 @@ import { OrdersModule } from './orders/orders.module';
     ReactiveFormsModule,
     HttpClientModule,
     ProductModule,
-    OrdersModule
+    OrdersModule,
+    FashionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
