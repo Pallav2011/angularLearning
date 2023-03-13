@@ -2,7 +2,9 @@
     display: inline-block;
     margin-right: 25px;
     margin-bottom: 25px;
+    box-shadow: 5px 5px 10px blue;
+    border-radius: 15px;
 }
 img{
-    height: 145px;
+    height: 145px;    
 }

@@ -34,7 +34,7 @@ export class TemplateformComponent implements OnInit {
   constructor( private serviceObject:MyserviceService, private route:Router) { }
 
   ngOnInit() {
-    this.serviceObject.print();
+    // this.serviceObject.print();
   }
 
   login(form: NgForm) {
