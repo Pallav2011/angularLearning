@@ -64,6 +64,7 @@ import { MembersComponent } from './members/members.component';
 import { ProductModule } from './products/product.module';
 import { OrdersModule } from './orders/orders.module';
 import { FashionModule } from './fashion/fashion.module';
+import { TodoComponent } from './service/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +100,8 @@ import { FashionModule } from './fashion/fashion.module';
     DemopostdetailsComponent,
     UserdetailsComponent,
     UsersComponent,
-    MembersComponent
+    MembersComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,45 @@
 <p>aboutus works!</p>
+
+<h4>News Table</h4>
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>uuid</th>
+          <th>title</th>
+          <th>publisher</th>
+          <th>link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of apiData.news">
+          <td>{{i.uuid}}</td>
+          <td>{{i.title}}</td>
+          <td>{{i.publisher}}</td>
+          <td>{{i.link}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Quotes Table</h4>
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Exchange</th>
+          <th>Short Name</th>
+          <th>Quote type</th>
+          <th>Symbol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let j of apiData.qoutes">
+          <td>{{j.exchange}}</td>
+          <td>{{j.shortname}}</td>
+          <td>{{j.quoteType}}</td>
+          <td>{{j.symbol}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

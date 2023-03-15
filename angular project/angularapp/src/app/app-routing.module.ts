@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemoComponent } from './demo/demo.component';
@@ -50,11 +50,13 @@ const routes: Routes = [
     {path:'children',component:ChildrensComponent},
   ]
 },
+{ path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
   {path:'**',component:PagenotfoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy : PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RapidapiService } from '../service/rapidapi.service';
 
 @Component({
   selector: 'app-aboutus',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutusComponent implements OnInit {
 
-  constructor() { }
+  apiData={};
+  constructor(private rapidapiService: RapidapiService) { }
 
   ngOnInit() {
+    this.rapidapiService.getFinance().subscribe(res=>{
+      console.log('responce',res);
+      this.apiData=res;
+    })
   }
-
 }

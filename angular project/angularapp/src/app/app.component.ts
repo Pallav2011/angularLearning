@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from './models/employee';
+import { RapidapiService } from './service/rapidapi.service';
 
 @Component({
   selector: 'app-root',
@@ -23,14 +24,14 @@ export class AppComponent implements OnInit {
       description:'This is a Mobile.'
     }
   ]
-
+  
  
   constructor(){
 this.assignValue();
   }
 
   ngOnInit(){
-
+   
   }
 
   assignValue(){
