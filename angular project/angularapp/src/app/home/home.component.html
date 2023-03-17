@@ -1,5 +1,25 @@
 <p>home works!</p>
+
+<input type="text">
 <button class="btn btn-primary" (click)="createPost()">Create Post</button><br><br>
 <button class="btn btn-success" (click)="getData()">Get Data</button>
 
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of responceData">
+                <td>i.id</td>
+                <td>i.title</td>
+                <td>i.content</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 

@@ -10,6 +10,7 @@ import { of } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
+  responceData=[];
   constructor(private firebaseService:FirebaseService) { }
 
   ngOnInit() {
@@ -33,11 +34,8 @@ export class HomeComponent implements OnInit {
   createPost(){
     this.firebaseService.createPosts().subscribe(res=>{
       console.log('data',res);
-      
     })
    }
-
- 
 
    getData() {
        // this.firebaseService.getPostDataFirebase().subscribe(res => {
@@ -61,6 +59,7 @@ export class HomeComponent implements OnInit {
          })
        ).subscribe(res => {
          console.log('after manipulate data', res);
+         this.responceData=res;
        })
      }
    
