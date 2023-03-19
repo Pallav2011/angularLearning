@@ -1,0 +1,7 @@
+table,tr,th,td{
+    border-color: sandybrown;
+    border: solid 2px sandybrown;
+}
+th{
+    background-color: plum;
+}

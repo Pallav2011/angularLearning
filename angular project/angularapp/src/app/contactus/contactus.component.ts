@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RapidapiService } from '../service/rapidapi.service';
+import { WikipediaService } from '../service/wikipedia.service';
 
 @Component({
   selector: 'app-contactus',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor() { }
+  givenData={};
+  constructor(private wikiservice:WikipediaService) { }
 
   ngOnInit() {
+  }
+
+  searchData(searchValue){
+    this.wikiservice.searchData(searchValue.value).subscribe(res=>{
+      console.log('wikipedia data',res);
+      this.givenData=res;  
+      
+    })
   }
 
 }

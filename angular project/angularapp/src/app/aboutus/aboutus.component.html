@@ -22,24 +22,41 @@
     </table>
   </div>
 
-  <!-- <h4>Quotes Table</h4>
-<div>
-    <table class="table">
-      <thead>
+  <h4>Quotes Table</h4>
+
+  <table class="table">
+    <thead>
         <tr>
-          <th>Exchange</th>
-          <th>Short Name</th>
-          <th>Quote type</th>
-          <th>Symbol</th>
+        <th>Exchange</th>
+        <th>Short Name</th>
+        <th>Symbol</th>
+        <th>dispSecIndFlag</th>
+        <th>exchDisp</th>
+        <th>index</th>
+        <th>industry</th>
+        <th>isYahooFinance</th>
+        <th>longname</th>
+        <th>quoteType</th>
+        <th>score</th>
+        <th>sector</th>
+        <th>typeDisp</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of apiData.quotes">
+            <td>{{data.exchange}}</td>
+            <td>{{data.shortname}}</td>
+            <td>{{data.symbol}}</td>
+            <td>{{data.dispSecIndFlag}}</td>
+            <td>{{data.exchDisp}}</td>
+            <td>{{data.index}}</td>
+            <td>{{data.industry}}</td>
+            <td>{{data.isYahooFinance}}</td>
+            <td>{{data.longname}}</td>
+            <td>{{data.quoteType}}</td>
+            <td>{{data.score}}</td>
+            <td>{{data.sector}}</td>
+            <td>{{data.typeDisp}}</td>
         </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let j of apiData.qoutes">
-          <td>{{j.exchange}}</td>
-          <td>{{j.shortname}}</td>
-          <td>{{j.quoteType}}</td>
-          <td>{{j.symbol}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
+    </tbody>
+</table>
