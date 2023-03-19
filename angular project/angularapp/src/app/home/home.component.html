@@ -11,13 +11,15 @@
                 <th>ID</th>
                 <th>Title</th>
                 <th>Content</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let i of responceData">
-                <td>i.id</td>
-                <td>i.title</td>
-                <td>i.content</td>
+                <td>{{i.id}}</td>
+                <td>{{i.title}}</td>
+                <td>{{i.content}}</td>
+                <td><button class="btn btn-success">Edit</button><button class="btn btn-danger">Delete</button></td>
             </tr>
         </tbody>
     </table>

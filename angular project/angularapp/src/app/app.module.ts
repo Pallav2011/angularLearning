@@ -63,7 +63,6 @@ import { UsersComponent } from './users/users.component';
 import { MembersComponent } from './members/members.component';
 import { ProductModule } from './products/product.module';
 import { OrdersModule } from './orders/orders.module';
-import { FashionModule } from './fashion/fashion.module';
 import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
@@ -134,8 +133,7 @@ import { TodoComponent } from './todo/todo.component';
     ReactiveFormsModule,
     HttpClientModule,
     ProductModule,
-    OrdersModule,
-    FashionModule
+    OrdersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

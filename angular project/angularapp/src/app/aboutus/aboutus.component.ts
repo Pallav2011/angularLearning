@@ -15,6 +15,8 @@ export class AboutusComponent implements OnInit {
     this.rapidapiService.getFinance().subscribe(res=>{
       console.log('responce',res);
       this.apiData=res;
+      // console.log('qoutes data',res.quotes);
+      
     })
   }
 }

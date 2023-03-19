@@ -2,13 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { DemoComponent } from './demo/demo.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
-import { ChildrensComponent } from './fashion/childrens/childrens.component';
-import { FashionComponent } from './fashion/fashion.component';
-import { MensComponent } from './fashion/mens/mens.component';
-import { WomensComponent } from './fashion/womens/womens.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
@@ -35,28 +30,21 @@ const routes: Routes = [
       {path:'watch',component:WatchComponent},
     ]
 },
-  {path:'post',component:DemopostComponent},
-  {path:'postDetails/:id', component:DemopostdetailsComponent},
-  {path:'users',component:UsersComponent},
-  {path:'userDetails/:id',component:UserdetailsComponent},
-  {path:'login',component:TemplateformComponent},
-  {path:'members',component:MembersComponent},
-  {path:'order',component:OrderlistComponent},
-  {path:'fashion',
-  children:[
-    {path:'',component:FashionComponent},
-    {path:'men',component:MensComponent},
-    {path:'women',component:WomensComponent},
-    {path:'children',component:ChildrensComponent},
-  ]
-},
-{ path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
+  { path:'post',component:DemopostComponent},
+  { path:'postDetails/:id', component:DemopostdetailsComponent},
+  { path:'users',component:UsersComponent},
+  { path:'userDetails/:id',component:UserdetailsComponent},
+  { path:'login',component:TemplateformComponent},
+  { path:'members',component:MembersComponent},
+  { path:'order',component:OrderlistComponent},
+  { path:'fashion',loadChildren:'./fashion/fashion.module#FashionModule'},
+  { path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
   { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
-  {path:'**',component:PagenotfoundComponent}
+  { path:'**',component:PagenotfoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { preloadingStrategy : PreloadAllModules })],
+  imports: [RouterModule.forRoot(routes)],//{ preloadingStrategy : PreloadAllModules }
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

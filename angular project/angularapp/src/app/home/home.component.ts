@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
     // example.subscribe(res => {
     //   console.log(`Even number: ${res}`);
     // })
+    this.getData();
   }
 
   createPost(){
