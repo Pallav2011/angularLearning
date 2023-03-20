@@ -66,6 +66,8 @@ import { OrdersModule } from './orders/orders.module';
 import { TodoComponent } from './todo/todo.component';
 import { WikipediaComponent } from './wikipedia/wikipedia.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
+import { ElectronicslistComponent } from './electronicslist/electronicslist.component';
+import { MycartComponent } from './mycart/mycart.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +106,9 @@ import { ElectronicsComponent } from './electronics/electronics.component';
     MembersComponent,
     TodoComponent,
     WikipediaComponent,
-    ElectronicsComponent
+    ElectronicsComponent,
+    ElectronicslistComponent,
+    MycartComponent
   ],
   imports: [
     BrowserModule,

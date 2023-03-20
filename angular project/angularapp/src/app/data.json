@@ -1,9 +1,61 @@
 {
-    "todo":[
-        {
-            "id":"",
-            "content":"",
-            "title":""
-        }
-    ]
+  "todo": [
+    {
+      "id": "",
+      "content": "",
+      "title": ""
+    }
+  ],
+  "users": [
+    {
+      "email": "abc@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "email": "ranpisepg09@gmail.com",
+      "password": "987654321",
+      "id": 2
+    },
+    {
+      "email": "abc@codemindtechnology.com",
+      "password": "456789",
+      "id": 3
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "456789",
+      "id": 4
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "456789",
+      "id": 5
+    },
+    {
+      "email": "ranpisepg09@gmail.com",
+      "password": "11111111111",
+      "id": 6
+    },
+    {
+      "email": "pqr@gmail.com",
+      "password": "789465",
+      "id": 7
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "email": "ranpisepg09@gmail.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "email": "ranpisepg09@gmail.com",
+      "password": "123456",
+      "id": 10
+    }
+  ]
 }

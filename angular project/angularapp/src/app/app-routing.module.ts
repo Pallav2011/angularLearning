@@ -5,8 +5,10 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
+import { ElectronicslistComponent } from './electronicslist/electronicslist.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
+import { MycartComponent } from './mycart/mycart.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './products/camera/camera.component';
@@ -46,6 +48,8 @@ const routes: Routes = [
   { path:'todo',component:TodoComponent},
   { path:'wiki',component:WikipediaComponent},
   { path: 'electronics', component:ElectronicsComponent},
+  { path:'electroniclist',component:ElectronicslistComponent},
+  { path:'mycart',component:MycartComponent},
   { path:'**',component:PagenotfoundComponent}
 ];
 
