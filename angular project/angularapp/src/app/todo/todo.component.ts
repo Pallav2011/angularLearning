@@ -32,7 +32,7 @@ export class TodoComponent implements OnInit {
 
   listToDos() {
     this.todoService.list().subscribe((res) => {
-      console.log(res)
+      console.log('getting Data',res)
       this.todoList = res;
     }, (error=> {
       console.log(error);

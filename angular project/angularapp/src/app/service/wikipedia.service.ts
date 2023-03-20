@@ -10,8 +10,7 @@ export class WikipediaService {
 
   constructor(private httpClient:HttpClient) { }
 
-  searchData(val:string){
-   
+  searchData(val:string){ 
     return this.httpClient.get(this.url,{ params: {
       action:'query',
       format:'json',

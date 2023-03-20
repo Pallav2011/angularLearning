@@ -14,8 +14,10 @@ import { MobileComponent } from './products/mobile/mobile.component';
 import { ProductComponent } from './products/product.component';
 import { WatchComponent } from './products/watch/watch.component';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { TodoComponent } from './todo/todo.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UsersComponent } from './users/users.component';
+import { WikipediaComponent } from './wikipedia/wikipedia.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'}, // http:localhost:4200 
@@ -40,6 +42,8 @@ const routes: Routes = [
   { path:'fashion',loadChildren:'./fashion/fashion.module#FashionModule'},
   { path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
   { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
+  { path:'todo',component:TodoComponent},
+  { path:'wiki',component:WikipediaComponent},
   { path:'**',component:PagenotfoundComponent}
 ];
 

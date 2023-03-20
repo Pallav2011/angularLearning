@@ -64,6 +64,7 @@ import { MembersComponent } from './members/members.component';
 import { ProductModule } from './products/product.module';
 import { OrdersModule } from './orders/orders.module';
 import { TodoComponent } from './todo/todo.component';
+import { WikipediaComponent } from './wikipedia/wikipedia.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { TodoComponent } from './todo/todo.component';
     UserdetailsComponent,
     UsersComponent,
     MembersComponent,
-    TodoComponent
+    TodoComponent,
+    WikipediaComponent
   ],
   imports: [
     BrowserModule,
