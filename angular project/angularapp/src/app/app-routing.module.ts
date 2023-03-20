@@ -4,6 +4,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
   { path:'todo',component:TodoComponent},
   { path:'wiki',component:WikipediaComponent},
+  { path: 'electronics', component:ElectronicsComponent},
   { path:'**',component:PagenotfoundComponent}
 ];
 
