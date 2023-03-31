@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Test1Component } from './test1/test1.component';
@@ -11,7 +10,6 @@ import { CardComponent } from './card/card.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { CountrystatedropdownComponent } from './countrystatedropdown/countrystatedropdown.component';
 import { NgifComponent } from './ngif/ngif.component';
-// import { CustomDirective } from './custom.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material';
@@ -68,6 +66,7 @@ import { WikipediaComponent } from './wikipedia/wikipedia.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
 import { ElectronicslistComponent } from './electronicslist/electronicslist.component';
 import { MycartComponent } from './mycart/mycart.component';
+import { AdduserComponent } from './adduser/adduser.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +78,6 @@ import { MycartComponent } from './mycart/mycart.component';
     NgforComponent,
     CountrystatedropdownComponent,
     NgifComponent,
-    // CustomDirective,
     NgswitchComponent,
     TemplateformComponent,
     ReactiveformComponent,
@@ -108,7 +106,8 @@ import { MycartComponent } from './mycart/mycart.component';
     WikipediaComponent,
     ElectronicsComponent,
     ElectronicslistComponent,
-    MycartComponent
+    MycartComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdduserComponent } from './adduser/adduser.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
@@ -16,6 +17,7 @@ import { LaptopComponent } from './products/laptop/laptop.component';
 import { MobileComponent } from './products/mobile/mobile.component';
 import { ProductComponent } from './products/product.component';
 import { WatchComponent } from './products/watch/watch.component';
+import { UnsavedchangesGuard } from './service/unsavedchanges.guard';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { TodoComponent } from './todo/todo.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
@@ -48,13 +50,17 @@ const routes: Routes = [
   { path:'todo',component:TodoComponent},
   { path:'wiki',component:WikipediaComponent},
   { path: 'electronics', component:ElectronicsComponent},
-  { path:'electroniclist',component:ElectronicslistComponent},
-  { path:'mycart',component:MycartComponent},
+  { path:'electroniclist',component:ElectronicslistComponent,
+  children:[
+    { path:'',component:MycartComponent}
+  ]
+  },
+  { path:'adduser',component:AdduserComponent,canDeactivate:[UnsavedchangesGuard]},
   { path:'**',component:PagenotfoundComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],//{ preloadingStrategy : PreloadAllModules }
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

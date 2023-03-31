@@ -7,6 +7,8 @@ import { Injectable } from '@angular/core';
 export class RapidapiService {
 
   url = 'https://yh-finance.p.rapidapi.com/auto-complete?q=tesla&region=US';
+  
+
   constructor(private httpClient:HttpClient) { }
 
   getFinance(){

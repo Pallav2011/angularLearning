@@ -1,15 +1,15 @@
 <br><br><br>
-<a routerLink="/mycart"><h5 style="margin-left: 700px;">My Cart : {{cartCount}}</h5></a>
+<a routerLink="mycart" class="btn btn-primary" (click)="sendToCart()">My Cart :{{cartCount}}</a>
 <div class="row">
     <h1>Electronic Products</h1>
     <div class="col-md-12">
     </div>
       <div class="col-md-6">
           <div class="card" >
-              <img class="card-img-top" src="../../assets/images/laptop.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{laptopData.image}}" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title">Laptop</h5>
-                <p class="card-text">This is Laptop and easy to handle.</p>
+                <h5 class="card-title">{{laptopData.title}}</h5>
+                <p class="card-text">{{laptopData.disc}}</p>
                 <button class="btn btn-primary" (click)="addToCart()">Add to Cart</button>
               </div>
           </div>
