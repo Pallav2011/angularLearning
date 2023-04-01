@@ -25,7 +25,12 @@ export class AppComponent implements OnInit {
     }
   ]
   
- 
+ data=0;
+
+ changeFromParent(){
+  this.data+=1;
+ }
+
   constructor(){
 this.assignValue();
   }

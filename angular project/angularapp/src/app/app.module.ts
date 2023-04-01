@@ -67,6 +67,8 @@ import { ElectronicsComponent } from './electronics/electronics.component';
 import { ElectronicslistComponent } from './electronicslist/electronicslist.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { MachintestComponent } from './machintest/machintest.component';
+import { HoooksComponent } from './hoooks/hoooks.component';
 
 @NgModule({
   declarations: [
@@ -107,7 +109,9 @@ import { AdduserComponent } from './adduser/adduser.component';
     ElectronicsComponent,
     ElectronicslistComponent,
     MycartComponent,
-    AdduserComponent
+    AdduserComponent,
+    MachintestComponent,
+    HoooksComponent
   ],
   imports: [
     BrowserModule,

@@ -110,10 +110,12 @@
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/wiki" class="nav-link">Wikipedia</a> </li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/electronics" class="nav-link">Electronics</a> </li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/adduser" class="nav-link">Add User</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/machinetest" class="nav-link">Machine Test</a> </li>
+
     </ul>
   </nav>
 </header>
 
-
-
+<button class="btn btn-primary" (click)="changeFromParent()">change from parent</button>
+<app-hoooks [parentData]="data"></app-hoooks>
 <router-outlet></router-outlet>

@@ -23,6 +23,7 @@ import { TodoComponent } from './todo/todo.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UsersComponent } from './users/users.component';
 import { WikipediaComponent } from './wikipedia/wikipedia.component';
+import { MachintestComponent } from './machintest/machintest.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'}, // http:localhost:4200 
@@ -56,6 +57,7 @@ const routes: Routes = [
   ]
   },
   { path:'adduser',component:AdduserComponent,canDeactivate:[UnsavedchangesGuard]},
+  { path:'machinetest', component:MachintestComponent},
   { path:'**',component:PagenotfoundComponent}
 ];
 
