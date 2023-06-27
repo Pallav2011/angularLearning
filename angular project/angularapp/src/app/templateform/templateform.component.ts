@@ -31,7 +31,7 @@ export class TemplateformComponent implements OnInit {
     course:'',
     gender:''
   }
-  constructor( private serviceObject:MyserviceService, private route:Router) { }
+  constructor(private serviceObject:MyserviceService, private route:Router) { }
 
   ngOnInit() {
     // this.serviceObject.print();

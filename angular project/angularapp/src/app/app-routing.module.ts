@@ -24,11 +24,14 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UsersComponent } from './users/users.component';
 import { WikipediaComponent } from './wikipedia/wikipedia.component';
 import { MachintestComponent } from './machintest/machintest.component';
+import { HoooksComponent } from './hoooks/hoooks.component';
+import { RapidapipracticeComponent } from './rapidapipractice/rapidapipractice.component';
+import { FirebasepracticeComponent } from './firebasepractice/firebasepractice.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'}, // http:localhost:4200 
   { path: 'home', component: HomeComponent},
-  { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus
+  { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus 
   { path: 'contactus', component: ContactusComponent },
   { path: 'product', component:ProductComponent,
     children:[
@@ -57,7 +60,10 @@ const routes: Routes = [
   ]
   },
   { path:'adduser',component:AdduserComponent,canDeactivate:[UnsavedchangesGuard]},
+  { path:'hooks', component:HoooksComponent},
   { path:'machinetest', component:MachintestComponent},
+  { path:'rapidapipract', component:RapidapipracticeComponent},
+  { path:'firebasepract', component:FirebasepracticeComponent},
   { path:'**',component:PagenotfoundComponent}
 ];
 

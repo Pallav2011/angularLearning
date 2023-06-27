@@ -3,12 +3,6 @@
   <h1>
   Welcome to {{ title }}! {{name}}
   </h1>
- 
-  <h4>
-    Empolyee count :{{empCount}}
-  </h4>
-  <app-demo></app-demo>
-  <app-test1></app-test1>
   
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
   
@@ -26,10 +20,16 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
- -->
 
-<!-- <app-test2 [child]="parentData" (fromChild)="onParent($event)" (objFromChild)="objParent($event)" (empObjDeco)="showEmpObj($event)"></app-test2> -->
-<!-- 
+<h4>
+  Empolyee count :{{empCount}}
+</h4>
+<app-demo></app-demo>
+<app-test1></app-test1>
+
+
+<app-test2 [child]="parentData" (fromChild)="onParent($event)" (objFromChild)="objParent($event)" (empObjDeco)="showEmpObj($event)"></app-test2>
+ 
 <app-card [image]="arrayofData[0].image" [titleData]="arrayofData[0].titleData" [description]="arrayofData[0].description"></app-card>
 <app-card [image]="arrayofData[1].image" [titleData]="arrayofData[1].titleData" [description]="arrayofData[1].description"></app-card><hr>
 <app-ngfor></app-ngfor>
@@ -55,13 +55,11 @@
 <app-registrationform></app-registrationform>
 <app-reactiveform></app-reactiveform>
 <app-reactiveformassign></app-reactiveformassign>
-<app-reactiveformassign2></app-reactiveformassign2>
+<app-reactiveformassign2></app-reactiveformassign2> 
 <ng-container *ngFor="let p of products">
   product Name:<strong class="text-success">{{p.name}}</strong>
   product Id:<strong class="text-success">{{p.id}}</strong>
 </ng-container>
-
-
 
  <app-pipeexample></app-pipeexample> 
 <app-productfilter></app-productfilter>
@@ -90,7 +88,7 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <header>
   <nav>
@@ -111,11 +109,26 @@
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/electronics" class="nav-link">Electronics</a> </li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/adduser" class="nav-link">Add User</a> </li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/machinetest" class="nav-link">Machine Test</a> </li>
-
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/hooks" class="nav-link">Hooks Test</a> </li> 
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/rapidapipract" class="nav-link">Rapid API Pract</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/firebasepract" class="nav-link">Firebase API Pract</a> </li>
     </ul>
   </nav>
 </header>
-
-<button class="btn btn-primary" (click)="changeFromParent()">change from parent</button>
-<app-hoooks [parentData]="data"></app-hoooks>
+<input type="text" (blur)="sendData($event)" placeholder="enter value">
+ <button class="btn btn-primary" (click)="changeFromParent()">change from parent</button> 
+<app-hoooks [parentData]="data" *ngIf="appExist">
+  <h1 #child>
+    this is child content coming from parent content
+  </h1>
+  <button class="btn btn-danger" (click)="onDestroy()">OnDestroy</button>
+</app-hoooks>
 <router-outlet></router-outlet>
+<app-templateform></app-templateform>
+<app-twoway></app-twoway>
+<app-todo></app-todo>
+<app-twoway></app-twoway>
+<app-logintemplateform></app-logintemplateform>
+<app-firebasepractice></app-firebasepractice> -->
+
+<app-todo></app-todo>

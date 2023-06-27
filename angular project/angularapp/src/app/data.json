@@ -67,5 +67,23 @@
       "password": "",
       "id": 12
     }
+  ],
+  "IdAndTitle": [
+    {
+      "id": 1680537128519,
+      "title": "Edited title"
+    },
+    {
+      "id": 1681898392256,
+      "title": "Format the data of firebase"
+    },
+    {
+      "id": 1682163350022,
+      "title": "Format the data of firebase"
+    },
+    {
+      "id": 1682163388074,
+      "title": "Format the data of firebase"
+    }
   ]
 }

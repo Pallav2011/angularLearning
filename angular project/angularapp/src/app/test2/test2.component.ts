@@ -28,8 +28,7 @@ empObj:Employee;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.child);
-    
+    console.log(this.child);    
   }
 
   onButtonClick(){

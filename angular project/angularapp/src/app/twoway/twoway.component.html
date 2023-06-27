@@ -1,0 +1,52 @@
+<div class="center">
+    
+<input type="text" [(ngModel)]="value">
+
+{{value}}
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Mobile No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of myDetails">
+                <td>{{data.name}}</td>
+                <td>{{data.age}}</td>
+                <td>{{data.address}}</td>
+                <td>{{data.mobileNumber}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<button (click)="getDetails()">Show Data</button>
+<button (click)="post()">Post Data</button>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of getData">
+                <td>{{i.userId}}</td>
+                <td>{{i.id}}</td>
+                <td>{{i.title}}</td>
+                <td>{{i.completed}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

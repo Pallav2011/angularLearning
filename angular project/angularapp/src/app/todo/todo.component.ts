@@ -8,7 +8,7 @@ import { TodoService } from '../service/todo.service';
 })
 export class TodoComponent implements OnInit {
 
-  todoList: any = [];
+  todoList;
   // DI 
   constructor(private todoService: TodoService) { }
 
@@ -18,7 +18,7 @@ export class TodoComponent implements OnInit {
 
   createTodo() {
     let todo = {
-      id: new Date().getTime(),
+      id: 202,
       title: `Format the data of firebase`
     }
 
@@ -26,14 +26,14 @@ export class TodoComponent implements OnInit {
       console.log('todo create', response);
       this.listToDos();
     }, (error => {
-      console.log(error)
+      console.log('error',error)
     }))
   }
 
   listToDos() {
     this.todoService.list().subscribe((res) => {
       console.log('getting Data',res)
-      this.todoList = res;
+      this.todoList=res ;
     }, (error=> {
       console.log(error);
     }))
@@ -52,8 +52,16 @@ export class TodoComponent implements OnInit {
 
   deleteTodo(id: any) {
     this.todoService.delete(id).subscribe(res => {
-      console.log('Record has been deleted');
+      console.log('Record has been deleted',res);
       this.listToDos();
+    })
+  }
+
+  todoapidata;
+  showDeta(){
+    this.todoService.getTodoData().subscribe(res=>{
+      console.log(res);
+      this.todoapidata=res;
     })
   }
 }

@@ -25,8 +25,6 @@ export class ReactiveformassignComponent implements OnInit {
     
   }
 
-  
-
   createControls(){
     this.subscriptionForm = new FormGroup({
       'email': new FormControl(null,[Validators.required, Validators.email]),
@@ -40,8 +38,7 @@ export class ReactiveformassignComponent implements OnInit {
     this.isSubmitted=true;
     console.log(this.subscriptionForm);
     console.log(this.d);
-    
-  console.log(this.todayDate); 
+    console.log(this.todayDate); 
   }
 
 }

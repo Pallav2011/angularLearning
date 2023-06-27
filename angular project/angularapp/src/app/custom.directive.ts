@@ -9,5 +9,4 @@ export class CustomDirective {
     el.nativeElement.style.backgroundColor='gray';
     el.nativeElement.style.color="yellow";
   }
-
 }

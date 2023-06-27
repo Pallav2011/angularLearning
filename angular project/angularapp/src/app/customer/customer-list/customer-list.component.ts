@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerListComponent implements OnInit {
 
+  name:string='Pandurang';
   constructor() { }
 
   ngOnInit() {
   }
 
+  clearText(){
+    this.name='';
+  }
 }

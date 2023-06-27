@@ -69,6 +69,11 @@ import { MycartComponent } from './mycart/mycart.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { MachintestComponent } from './machintest/machintest.component';
 import { HoooksComponent } from './hoooks/hoooks.component';
+import { RapidapipracticeComponent } from './rapidapipractice/rapidapipractice.component';
+import { FirebasepracticeComponent } from './firebasepractice/firebasepractice.component';
+import { TwowayComponent } from './twoway/twoway.component';
+import { LogintemplateformComponent } from './logintemplateform/logintemplateform.component';
+import { NextcompComponent } from './nextcomp/nextcomp.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +116,12 @@ import { HoooksComponent } from './hoooks/hoooks.component';
     MycartComponent,
     AdduserComponent,
     MachintestComponent,
-    HoooksComponent
+    HoooksComponent,
+    RapidapipracticeComponent,
+    FirebasepracticeComponent,
+    TwowayComponent,
+    LogintemplateformComponent,
+    NextcompComponent
   ],
   imports: [
     BrowserModule,

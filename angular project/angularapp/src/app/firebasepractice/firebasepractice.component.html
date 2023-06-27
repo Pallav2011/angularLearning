@@ -1,0 +1,20 @@
+<input type="text" #name>
+<input type="text" #age>
+<br>
+<button (click)="create(name,age)">Send Data</button>
+<button (click)="get()">Get Data</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of getData">
+            <td>{{i.myName}}</td>
+            <td>{{i.myAge}}</td>
+        </tr>
+    </tbody>
+</table>
+

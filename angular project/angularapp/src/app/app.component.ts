@@ -8,6 +8,7 @@ import { RapidapiService } from './service/rapidapi.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  appExist:boolean=true;
   title = 'angularapp';
   name:string="Pandurang";
   empCount;
@@ -25,7 +26,7 @@ export class AppComponent implements OnInit {
     }
   ]
   
- data=0;
+ data:string='red';
 
  changeFromParent(){
   this.data+=1;
@@ -46,11 +47,22 @@ this.empCount=10000;
   onParent(val){
 alert(val);
   }
+
   objParent(objVal){
     console.log('Name is :',objVal.name);
     console.log('Mobile No :',objVal.moNo); 
   }
+
   showEmpObj(empVal:Employee){
 console.log(empVal);
+  }
+
+  
+  sendData(val){
+    this.data = val.target.value;
+  }
+
+  onDestroy(){
+    this.appExist=false;
   }
 }

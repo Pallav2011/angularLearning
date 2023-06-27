@@ -1,8 +1,8 @@
 <p>todo works!</p>
 
-<button class="btn btn-primary" (click)="createTodo()" >Create</button>
+<button class="btn btn-primary" (click)="createTodo()" >Click To Create ToDo</button>
 
-<!-- <div class="container">
+<div class="container">
     <table class="table">
         <thead>
          <tr>
@@ -16,10 +16,30 @@
                 <td>{{todo.id}}</td>
                 <td>{{todo.title}}</td>
                 <td>
-                    <button type="button" class="btn btn-link" (click)="editTodo(todo)" >Edit</button>
-                    <button type="button" class="btn btn-link" (click)="deleteTodo(todo.id)" >Delete</button>
+                    <button type="button" class="btn btn-info" (click)="editTodo(todo)" >Edit</button>
+                    <button type="button" class="btn btn-info" (click)="deleteTodo(todo.id)" >Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
-</div> -->
+
+    <button (click)="showDeta()">SHow Data</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of todoapidata">
+                <td>{{data.userId}}</td>
+                <td>{{data.id}}</td>
+                <td>{{data.title}}</td>
+                <td>{{data.completed}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

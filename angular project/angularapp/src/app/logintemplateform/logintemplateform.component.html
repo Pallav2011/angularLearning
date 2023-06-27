@@ -1,0 +1,17 @@
+
+
+<div>
+    <h2>Login form</h2>
+    <form #loginForm="ngForm">
+
+        <label for="">Enter User ID: </label>
+        <input type="text" name="userid" ngModel #userid="ngModel">
+
+        <label for="">Enter Password: </label>
+        <input type="password" name="password" ngModel #password="ngModel">
+
+        <button (click)="save(loginForm)">Login</button>
+    </form>
+</div>
+
+<app-nextcomp [child]="myDetails"></app-nextcomp>
